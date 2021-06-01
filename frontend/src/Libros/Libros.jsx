@@ -80,7 +80,7 @@ export default function Libros(props) {
         getLibros();
         getCategorias(); 
         getPersonas();       
-    }, []);
+    }, [libros]);
 
     const renderizarPrestarDevolver = (libroId, personaId) => {
 
@@ -100,8 +100,8 @@ export default function Libros(props) {
                     </select>
                     }
                     { personaId === null
-                      ? <button onClick={() => prestarLibro(libroId, personaId)}>Prestar</button> 
-                      : <button onClick={() => devolverLibro(libroId)}>Devolver</button> 
+                        ? <button onClick={() => prestarLibro(libroId, personaId)}>Prestar</button> 
+                        : <button onClick={() => devolverLibro(libroId)}>Devolver</button> 
                     }        
                 </td>
             </>
